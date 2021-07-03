@@ -31,7 +31,7 @@ export default function Home() {
     if (!isConnected) {
       setRedirect(true)
     }
-  }, [loadTask])
+  }, [filterActived])
 
   return (
     <>
