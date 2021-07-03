@@ -29,12 +29,12 @@ export default function Header({ clickNotification }) {
       <header>
         <img src={logo} alt="" />
         <nav>
-          <Link to="/">Inicio</Link>
-          <span className="divider" />
+         
+        
 
           {isConnected ? (
             <>
-              <Link to="/task">Nova Tarefa</Link>
+              <Link to="/">Inicio</Link>
               <span className="divider" />
             </>
           ) : (
@@ -42,11 +42,15 @@ export default function Header({ clickNotification }) {
           )}
 
           {!isConnected ? (
-            <Link to="/sincronizar">Sincronizar</Link>
+         ''
           ) : (
+            <>
+  <Link to="/task">Nova Tarefa</Link>
+  <span className="divider" />
             <button type="button" onClick={Logout} className="sair">
               Sair
             </button>
+            </>
           )}
           {late && (
             <>

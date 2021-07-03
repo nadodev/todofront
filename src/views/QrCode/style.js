@@ -41,6 +41,10 @@ export const ValidationCode = styled.div`
     font-size: 18px;
     padding: 10px;
     text-align: center;
+    border-radius:14px;
+    border:0;
+    background:#eee;
+    border: 1px solid  #e9e9e9;
   }
   button {
     font-weight: bold;
@@ -57,4 +61,8 @@ export const ValidationCode = styled.div`
       background-color: #a7dbfb;
     }
   }
+`
+export const obs = styled.p`
+font-size:12px;
+color:red;
 `

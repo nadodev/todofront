@@ -23,17 +23,23 @@ export default function QrCode() {
       {redirectt && <Redirect to="/" />}
       <Header />
       <S.Content>
-        <h1>CAPTURE O QRCODE PELO APP</h1>
-        <p>sua atividades serão sincronizadas com a do seu celular</p>
+        <h1>Cadastre uma senha</h1>
+        <p>Sua atividades serão sincronizadas apartir dessa Senha</p>
+        <p>Utilize essa mesma senha para entrar e visualizar suas tarefas</p>
+
         <S.QrCodeArea>
-          <Qr value='getmacaddres' size={350} />
+          {/* <Qr value='getmacaddres' size={350} /> */}
           <S.ValidationCode>
-            <span>Digite o codigo do celular</span>
-            <input type="text" value={mac} onChange={e => setMac(e.target.value)} />
+           {/*  <span>Digite o codigo do celular</span> */}
+            <input type="text" value={mac} onChange={e => setMac(e.target.value)} placeholder="Digite sua Senha"/>
+
+          
             <button type="button" onClick={SaveMac}>Sincronizar</button>
           </S.ValidationCode>
+   
         </S.QrCodeArea>
       </S.Content>
+      <S.obs>Não tem cadastro? digite uma senha e clique em sincronizar</S.obs>
       <Footer />
     </S.Container>
   )
