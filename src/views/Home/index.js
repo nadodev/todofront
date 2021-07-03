@@ -15,7 +15,9 @@ export default function Home() {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function loadTask() {
-    api.get(`/task/filter/${filterActived}/${isConnected}`).then(response => {})
+    api.get(`/task/filter/${filterActived}/${isConnected}`).then(response => {
+      setTasks(response.data)
+    })
   }
 
   function Notification() {
@@ -27,7 +29,7 @@ export default function Home() {
     if (!isConnected) {
       setRedirect(true)
     }
-  }, [loadTask])
+  })
 
   return (
     <>
