@@ -25,11 +25,10 @@ export default function Home() {
   }
 
   useEffect(() => {
-    loadTask()
     if (!isConnected) {
       setRedirect(true)
     }
-  })
+  }, [loadTask])
 
   return (
     <>
