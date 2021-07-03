@@ -32,7 +32,7 @@ export default function Home() {
     if (!isConnected) {
       setRedirect(true);
     }
-  }, [loadTask])
+  }, [])
 
   return (
     <>
